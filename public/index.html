@@ -9,8 +9,12 @@
 </head>
 <body>
   <div id="app">
+    <h1>{{ title }}</h1>
     <input type="text" placeholder='change the text' v-on:change='handleChange'>
-    <p>{{ title }}</p>
+    <p>{{ caption }}</p>
+    <p v-once>{{ updateTitle() }}</p>
+    <a v-bind:href='link'>A link</a>
+    <button v-on:click='clickUpdate'>Change Title</button>
   </div>
 
 
