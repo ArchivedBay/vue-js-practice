@@ -8,13 +8,16 @@ new Vue({
     fullTag: '<a href="google.com">Google</a>',
     x:0,
     y:1,
-    food: 'unknown food item'
+    food: 'unknown food item',
+    imageUrl: 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'
   },
+
   computed: {
     showCoordMessage: function(){
       return this.x >= 500 ? 'X is greater than or equal to 500' : 'X is less than 500';
     }
   },
+
   methods: {  // similar to your class/component methods in react
     handleChange: function(event){
       this.caption = event.target.value;
@@ -36,6 +39,17 @@ new Vue({
     updateCoords: function(event){
       this.x = event.clientX;
       this.y = event.clientY;
+    },
+    changeBackground: function(){
+      
+      const images = [
+        'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg',
+        'https://www.bluecross.org.uk/sites/default/files/assets/images/124044lpr.jpg',
+        'https://www.catster.com/wp-content/uploads/2017/11/A-Siamese-cat.jpg'
+      ]
+
+      const choice = Math.floor(Math.random() * images.length);
+      this.imageUrl =  images[choice];
     }
   }
 });
