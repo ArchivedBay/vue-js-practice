@@ -10,6 +10,11 @@ new Vue({
     y:1,
     food: 'unknown food item'
   },
+  computed: {
+    showCoordMessage: function(){
+      return this.x >= 500 ? 'X is greater than or equal to 500' : 'X is less than 500';
+    }
+  },
   methods: {  // similar to your class/component methods in react
     handleChange: function(event){
       this.caption = event.target.value;
@@ -31,9 +36,6 @@ new Vue({
     updateCoords: function(event){
       this.x = event.clientX;
       this.y = event.clientY;
-    },
-    showCoordMessage: function(){
-      return this.x >= 500 ? 'X is greater than or equal to 500' : 'X is less than 500';
     }
   }
 });
@@ -47,3 +49,5 @@ new Vue({
       NOTE: If you place this on an element that's evoking a method, you can use it to stop it from re-rendering every time
             this is useful if you want a method to run once but don't want it to run every time the component / page renders.
     */
+
+// computed               - Allows Vue to know if an element needs updating or not, where as 'methods' will run regardless of if it needs to.
