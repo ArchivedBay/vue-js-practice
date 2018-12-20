@@ -9,12 +9,22 @@
 </head>
 <body>
   <div id="app">
-    <h1>{{ title }}</h1>
+    <h1>{{ title }} counter: {{ count }}</h1>
+
     <input type="text" placeholder='change the text' v-on:change='handleChange'>
     <p>{{ caption }}</p>
     <p v-once>{{ updateTitle() }}</p>
     <a v-bind:href='link'>A link</a>
     <button v-on:click='clickUpdate'>Change Title</button>
+    <button v-on:click='increaseCount'>Increase Count</button>
+    <p v-html='fullTag'></p>
+
+    <p v-on:mousemove='updateCoords'>Coordinates: {{ showCoords() }}</p>
+    <form v-on:submit.prevent='handleForm'>
+      <input type='text' placeholder="enter the name of a food" id='food' name='food'/>
+      <button>Submit Food item</button>
+    </form>
+    <p>{{ food }}</p>
   </div>
 
 
