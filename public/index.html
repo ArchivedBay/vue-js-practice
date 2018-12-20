@@ -31,13 +31,7 @@
 
     <p>{{ food }}</p>
     
-    <div :style="{
-      backgroundImage: `url(${imageUrl})`,
-      backgroundSize: 'cover',
-      width: '200px',
-      height: '200px'
-    }">
-    </div>
+    <div :style="dynamicBG"></div>
     <button @click='changeBackground'>Change image</button>
   </div>
 

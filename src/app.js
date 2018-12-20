@@ -15,6 +15,14 @@ new Vue({
   computed: {
     showCoordMessage: function(){
       return this.x >= 500 ? 'X is greater than or equal to 500' : 'X is less than 500';
+    },
+    dynamicBG: function(){
+      return {
+        backgroundImage: `url(${this.imageUrl})`,
+        backgroundSize: 'cover',
+        width: '200px',
+        height: '200px'
+      }
     }
   },
 
