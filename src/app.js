@@ -25,15 +25,15 @@ new Vue({
       this.title = 'apples';
       return;
     },
-    increaseCount: function(){
-      this.count ++;
-    },
     showCoords: function(){
       return `X: ${this.x} Y: ${this.y}`;
     },
     updateCoords: function(event){
       this.x = event.clientX;
       this.y = event.clientY;
+    },
+    showCoordMessage: function(){
+      return this.x >= 500 ? 'X is greater than or equal to 500' : 'X is less than 500';
     }
   }
 });
@@ -42,6 +42,7 @@ new Vue({
 // v-on:change/click/etc  - Vue's version of event handlers. returns an event to the associated method.
 // v-on:submit.prevent    - You can automatically call event.preventDefault() by adding .prevent in the vue modifiers.
 // v-once                 - When placed on an element, causes it to only render one time.
+
     /* 
       NOTE: If you place this on an element that's evoking a method, you can use it to stop it from re-rendering every time
             this is useful if you want a method to run once but don't want it to run every time the component / page renders.
