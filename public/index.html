@@ -11,25 +11,26 @@
   <div id="app">
     <h1>{{ title }} counter: {{ count }}</h1>
 
-    <input type="text" placeholder='change the text' v-on:change='handleChange'>
+    <input type="text" placeholder='change the text' @change='handleChange'>
 
     <p>{{ caption }}</p>
     <p v-once>{{ updateTitle() }}</p>
-    <a v-bind:href='link'>A link</a>
+    <a :href='link'>A link</a>
 
-    <button v-on:click='clickUpdate'>Change Title</button>
-    <button v-on:click='count++'>Increase Count</button>
+    <button @click='clickUpdate'>Change Title</button>
+    <button @click='count++'>Increase Count</button>
 
     <p v-html='fullTag'></p>
-    <p v-on:mousemove='updateCoords'>Coordinates: {{ showCoords() }}</p>
+    <p @mousemove='updateCoords'>Coordinates: {{ showCoords() }}</p>
     <p>{{ showCoordMessage }}</p>
 
-    <form v-on:submit.prevent='handleForm'>
+    <form @submit.prevent='handleForm'>
       <input type='text' placeholder="enter the name of a food" id='food' name='food'/>
       <button>Submit Food item</button>
     </form>
 
     <p>{{ food }}</p>
+    
   </div>
 
 

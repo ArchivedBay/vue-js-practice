@@ -51,3 +51,12 @@ new Vue({
     */
 
 // computed               - Allows Vue to know if an element needs updating or not, where as 'methods' will run regardless of if it needs to.
+  // NOTE: computed properties MUST be synchronous, you cannot have api calls here, for that use the 'watch' vue property instead.
+
+// watch                  - similar to the component lifecycle methods in react, listens for incoming changes from async operations
+  // NOTE: When using closures you need to store 'this' in a variable prior to usage.
+
+/*  shorthands:
+      @click, @mousemove, etc. === v-on:click, v-on:mousemove, etc.
+      :href === v-bind:href
+*/
