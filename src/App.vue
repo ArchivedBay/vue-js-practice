@@ -1,56 +1,55 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <nav id="nav">
+      <div class='logo'>AwesomeLogo</div>
+
+      <ul>
+        <li> <router-link class='nav-link' to="/">Home</router-link> </li>
+        <li> <router-link class='nav-link' to="/link1">Link 1</router-link> </li>
+        <li> <router-link class='nav-link' to="/link2">Link 2</router-link> </li>
+        <li> <router-link class='nav-link' to="/link3">Link 3</router-link> </li>
+        <li> <router-link class='nav-link' to="/link4">Link 4</router-link> </li>
+        <li> <router-link class='nav-link' to="/link5">Link 5</router-link> </li>
+        <li> <router-link class='nav-link' to="/link6">Link 6</router-link> </li>
+        <li> <router-link class='nav-link' to="/link7">Link 7</router-link> </li>
+        <li> <router-link class='nav-link' to="/link8">Link 8</router-link> </li>
+      </ul>   
+    </nav>
+
+    <router-view/>
   </div>
 </template>
 
 
 
-<script>
-  import HelloWorld from './components/HelloWorld.vue'
-
-  export default {
-    name: 'app',
-    components: {
-      HelloWorld
-    }
-  }
-</script>
-
-
-
 <style lang="scss">
+  @import './main.scss';
   @import './colors.scss';
 
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  #app { font-family: 'Avenir', Helvetica, Arial, sans-serif }
+
+  #nav {
+    padding: 0 3rem;
+    height: 6rem;
+    background-color: map-get($colors, light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  html { font-size: 62.5% }
+  .logo { width: 30% }
+  ul { display: flex }
 
-  body {
-    box-sizing: border-box;
-    font-size: 1.6rem;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    background-color: map-get($colors, primary-bg);
-  }
-
-  a		{ text-decoration: none }
-  ul	{ list-style: none }
-
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: map-get($colors, primary-text);
-    margin-top: 6rem;
+  .nav-link {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 1rem; 
+    
+    &:link, &:visited { color: map-get($colors, navlink) }
+    &:link, &:hover   { transition: color 0.2s ease }
+    &:hover           { color: map-get($colors, secondary) }
   }
 </style>
