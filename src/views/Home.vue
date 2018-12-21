@@ -5,23 +5,26 @@
       caption='it is possible afterall :D' 
       imageID='1'
     />
-
     <MissionBlock />
+    <TechBlock />
+
+
   </div>
 </template>
 
 
-
 <script>
-  import HeroImage from '@/components/HeroImage.vue'
-  import MissionBlock from '@/components/MissionBlock.vue'
+  import HeroImage from '@/components/HeroImage.vue';
+  import MissionBlock from '@/components/MissionBlock.vue';
+  import TechBlock from '@/components/TechBlock.vue';
 
   export default {
     name: 'home',
 
     components: {
       HeroImage,
-      MissionBlock
+      MissionBlock,
+      TechBlock
     }
   }
 </script>

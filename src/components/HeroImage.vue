@@ -16,7 +16,6 @@
 </template>
 
 
-
 <script>
   export default {
     name: 'HeroImage',
@@ -27,7 +26,6 @@
     }
   }
 </script>
-
 
 
 <style scoped lang="scss">
@@ -75,5 +73,4 @@
     margin-top: 2rem;
     margin-left: 1rem; 
   }
-
 </style>
