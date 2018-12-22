@@ -51,5 +51,13 @@
     font-family: 'Muli', sans-serif;
     font-weight: 300;
     font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 400px){
+    .mission {
+      font-size: 2rem;
+      text-align: center;
+    }
   }
 </style>

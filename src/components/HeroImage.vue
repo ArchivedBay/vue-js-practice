@@ -73,4 +73,14 @@
     margin-top: 2rem;
     margin-left: 1rem; 
   }
+
+  @media screen and (max-width: 400px){
+    .message-container {
+      width: 100%;
+      margin-left: 0;
+    }
+    .hero-header-group { font-size: 4rem }
+
+    .caption { text-align: center }
+  }
 </style>
